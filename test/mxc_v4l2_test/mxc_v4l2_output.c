@@ -643,11 +643,13 @@ main(int argc, char **argv)
             icrop.c.width = g_in_width;
             icrop.c.height = g_in_height;
         }
+	/*
         if (ioctl(fd_v4l, VIDIOC_S_INPUT_CROP, &icrop) < 0) {
             printf("set icrop failed\n");
             retval = TFAIL;
             goto err1;
         }
+	*/
 
         memset(&fmt, 0, sizeof(fmt));
         fmt.type = V4L2_BUF_TYPE_VIDEO_OUTPUT;

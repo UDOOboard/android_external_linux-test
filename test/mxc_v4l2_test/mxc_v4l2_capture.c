@@ -146,7 +146,7 @@ int v4l_capture_setup(void)
         struct v4l2_streamparm parm;
 	struct v4l2_crop crop;
         int fd_v4l = 0;
-		struct v4l2_mxc_dest_crop of;
+//		struct v4l2_mxc_dest_crop of;
 	struct v4l2_dbg_chip_ident chip;
 	struct v4l2_frmsizeenum fsize;
 	struct v4l2_fmtdesc ffmt;
@@ -219,6 +219,7 @@ int v4l_capture_setup(void)
 		}
 	}
 
+	/*
 		of.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
         if (g_extra_pixel){
 			of.offset.u_offset = (2 * g_extra_pixel + g_out_width) * (g_out_height + g_extra_pixel)
@@ -238,6 +239,7 @@ int v4l_capture_setup(void)
 			return 0;
 		}
         }
+	*/
 
         fmt.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
         fmt.fmt.pix.pixelformat = g_cap_fmt;
